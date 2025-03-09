@@ -12,7 +12,7 @@ export class TaskControllerAgregar {
     @Post(RUTA_DIRECCION.AGREGAR) 
     AgregarTarea(@Body() tarea: Tarea){
 
-        return this.tasksServices.AgregarTareas(tarea);
+        return this.tasksServices.BorrarTareas(tarea);
     }
 
 }
