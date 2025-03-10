@@ -1,17 +1,21 @@
 import { Module } from '@nestjs/common';
-import { TaskController } from './CasosUso/ListarGestionTarea/task.controller';
-import { TaskService } from './CasosUso/ListarGestionTarea/task.service';
-import { TaskServiceAgregar } from './CasosUso/AgregarGestionTarea/AgregarGestionTarea.service';
-import { TaskControllerAgregar } from './CasosUso/AgregarGestionTarea/AgregarGestionTarea.controller';
+import { ListarGestionTareaController } from './CasosUso/ListarGestionTarea/ListarGestionTarea.controller';
+import { ListarGestionTareaService } from './CasosUso/ListarGestionTarea/ListarGestionTarea.service';
+import { AgregarGestionTareaService } from './CasosUso/AgregarGestionTarea/AgregarGestionTarea.service';
+import { AgregarGestionTareaController } from './CasosUso/AgregarGestionTarea/AgregarGestionTarea.controller';
+import { EliminarGestionTareaService } from './CasosUso/EliminarGesitonTarea/EliminaGestionTarea.service';
+import { EliminarGestionTareaController } from './CasosUso/EliminarGesitonTarea/EliminarGestionTarea.controller';
 
 @Module({
   controllers: [
-     TaskController
-    ,TaskControllerAgregar
+     ListarGestionTareaController
+    ,AgregarGestionTareaController
+    ,EliminarGestionTareaController
   ],
   providers: [
-     TaskService
-    ,TaskServiceAgregar
+    ListarGestionTareaService
+    ,AgregarGestionTareaService
+    ,EliminarGestionTareaService
   ]
 })
 export class RutasTarea {}

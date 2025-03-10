@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Tarea  } from '../../Entidad/Dto/Tarea.dto';
 
 @Injectable()
-export class TaskService {
+export class ListarGestionTareaService {
     
     ListarTareas(){
         return[

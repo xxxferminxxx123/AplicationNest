@@ -1,18 +1,18 @@
-import { Controller, Get ,Post,Body } from '@nestjs/common';
+import { Controller, Get ,Post,Body, Query, Param } from '@nestjs/common';
 import { RUTA_PRINCIPAL } from '../../Ruta/RutaPrincipal/RutaPrincipal'
 import { RUTA_DIRECCION } from '../../Ruta/RutaDireccion/RutaDireccion'
-import { EliminarGestionTarea } from './EliminaGestionTarea.service';
-import { Tarea  } from '../../Entidad/Dto/Tarea.dto';
+import { EliminarGestionTareaService } from './EliminaGestionTarea.service';
 
 @Controller(RUTA_PRINCIPAL.MAIN) 
-export class TaskControllerAgregar {
+export class EliminarGestionTareaController {
     
-    constructor(private tasksServices : EliminarGestionTarea ){}
+    constructor(private tasksServices : EliminarGestionTareaService ){}
+    private id ='id';
 
-    @Post(RUTA_DIRECCION.AGREGAR) 
-    AgregarTarea(@Body() tarea: Tarea){
+    @Post(RUTA_DIRECCION.ELIMINAR)
+    EliminarTarea(@Query('id') id: number) {
 
-        return this.tasksServices.BorrarTareas(tarea);
+        return this.tasksServices.BorrarTareas(id);
     }
 
 }
