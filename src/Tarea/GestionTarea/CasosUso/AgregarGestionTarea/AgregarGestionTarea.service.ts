@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Tarea  } from '../../Entidad/Dto/Tarea.dto';
+import { MENSAJES } from '../../Constants/Mensajes';
 
 @Injectable()
 export class AgregarGestionTareaService {
@@ -9,7 +10,7 @@ export class AgregarGestionTareaService {
     AgregarTareas( tarea: Tarea ){
 
         this.tareas.push(tarea);
-        return { mensaje: "Tarea agregada correctamente", tarea };
+        return { mensaje: MENSAJES.MENSAJE_AGREGAR, tarea };
     }
 
 }
