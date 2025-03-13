@@ -1,4 +1,4 @@
-import { direccionamientoPrincipal } from '../../Ruta/Direccion/Direccion';
+import { direccionamientoPrincipal } from '../Direccion/Direccion';
 
 const direccion = new direccionamientoPrincipal();
 

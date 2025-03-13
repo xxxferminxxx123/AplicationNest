@@ -1,4 +1,4 @@
-import { direccionamiento } from '../../Ruta/Direccion/Direccion';
+import { direccionamiento } from '../Direccion/Direccion';
 
 const direccion = new direccionamiento();
 
